@@ -1,0 +1,28 @@
+CREATE TABLE `produk` (
+	`id_produk` INT NOT NULL AUTO_INCREMENT,
+	`nama_produk` VARCHAR(225) NOT NULL DEFAULT '0',
+	`harga` DOUBLE NOT NULL DEFAULT 0,
+	`kategori_id` INT(11) NOT NULL DEFAULT 0,
+	`status_id` INT(11) NOT NULL DEFAULT 0,
+	PRIMARY KEY (`id_produk`)
+)
+COLLATE='utf8mb4_0900_ai_ci'
+;
+
+
+CREATE TABLE `kategori` (
+	`id_kategori` INT NOT NULL AUTO_INCREMENT,
+	`nama_kategori` VARCHAR(225) NOT NULL DEFAULT '0',
+	PRIMARY KEY (`id_kategori`)
+)
+COLLATE='utf8mb4_0900_ai_ci'
+;
+
+
+CREATE TABLE `status` (
+	`id_status` INT NOT NULL AUTO_INCREMENT,
+	`nama_status` VARCHAR(225) NOT NULL DEFAULT '',
+	PRIMARY KEY (`id_status`)
+)
+COLLATE='utf8mb4_0900_ai_ci'
+;
