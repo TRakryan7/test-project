@@ -55,18 +55,6 @@ class Page extends CI_Controller
                 return $this->load->view('create', $data);
               }
 
-            // $kategori = $this->kategori_model->find_by_name($this->input->post('nama_kategori'));
-
-            // if(!$kategori){
-            //     $kategori = $this->kategori_model->insert($this->input->post('nama_kategori'));
-            // }
-
-            // $status = $this->status_model->find_by_name($this->input->post('nama_status'));
-
-            // if(!$status){
-            //     $rstatus = $this->status_model->insert($this->input->post('nama_status'));
-            // }
-                // var_dump($this->input->post);
 
             $feedback = [
                 'nama_produk'=> $this->input->post('nama_produk'),
@@ -76,11 +64,7 @@ class Page extends CI_Controller
             ];
 
             $feedback_saved = $this->product_model->insert($feedback);
-
-            // redirect(base_url('/'));
-            // if ($feedback_saved) {
-            //     return $this->load->view('contact_thanks');
-            //   }
+            redirect(base_url('/'));
         }
 
 		$this->load->view('create', $data);
