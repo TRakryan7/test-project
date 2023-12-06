@@ -77,6 +77,7 @@ class Page extends CI_Controller
         $data['kategori'] = $this->kategori_model->find();
         $data['status'] = $this->status_model->find();
 
+        // var_dump($data['status']);
         $this->load->view('edit', $data);
     }
 
